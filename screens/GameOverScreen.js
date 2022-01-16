@@ -8,7 +8,12 @@ const GameOverScreen = (props) => {
         <View style={styles.screen}>
             <TitleText>The Game is Over!</TitleText>
             <View style={styles.imageContainer}>
-                <Image source={require('../assets/images/success.png')} style={styles.image} />
+                <Image 
+                    fadeDuration={1000} 
+                    // source={require('../assets/images/success.png')} 
+                    source={{uri: 'https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_1920,f_auto/A-Alamy-BXWK5E_vvmkuf.jpg'}} 
+                    style={styles.image} 
+                />
             </View>
             <BodyText>Number of rounds: {props.roundsNumber}</BodyText>
             <BodyText>Number was: {props.userNumber}</BodyText>
