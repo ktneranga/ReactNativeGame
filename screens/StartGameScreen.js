@@ -14,6 +14,7 @@ import Input from '../components/Input';
 import NumberContainer from '../components/NumberContainer';
 import BodyText from '../components/BodyText';
 import MainButton from '../components/MainButton';
+import { Ionicons } from '@expo/vector-icons'
 
 const StartGameScreen = (props) => {
 
@@ -50,7 +51,7 @@ const StartGameScreen = (props) => {
                 <Text>You Selected</Text>
                 <NumberContainer>{selectedNumber}</NumberContainer>
                 <MainButton onPress={()=>props.onStartGame(selectedNumber)}>
-                    Start Game
+                <Ionicons name="arrow-back-circle" size={24} color="white" /> Start Game
                 </MainButton>
             </Card>
         );
